@@ -99,9 +99,9 @@ os.environ["GOOGLE_CLOUD_PROJECT"] = GOOGLE_CLOUD_PROJECT
 
 # Connect to BigQuery
 client = bigquery.Client()
-#dataset_id = "mvp1-371016"  
-#logs_table_id = "ether_mvp1.logs" 
-#logs_table = client.get_table(f"{dataset_id}.{logs_table_id}")
+dataset_id = "mvp1-371016"  
+logs_table_id = "ether_mvp1.logs" 
+logs_table = client.get_table(f"{dataset_id}.{logs_table_id}")
 
 
 # Create a DataFrame object from the transformed_logs data
