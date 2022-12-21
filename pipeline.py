@@ -23,7 +23,7 @@ def extract_logs(address, from_block, to_block):
                  'fromBlock': from_block,
                  'toBlock': to_block,
                  'apikey': api_key,
-                }  # Note: added these parameters
+                }  
   # Set parameters for blocks API call
   blocks_params = {'module': 'block',
                    'action': 'getblockreward',
@@ -78,10 +78,10 @@ for log in logs:
         'block_extra_data': log.get('blockExtraData', None),
         'log_index': log.get('logIndex', None),
         'log_transaction_index': log.get('logTransactionIndex', None),
-        'log_type': log.get('log_type', None),  # Note: added this column
-        'log_data': log.get('log_data', None),  # Note: added this column
-        'log_topics': log.get('log_topics', None),  # Note: added this column
-        'log_removed': log.get('log_removed', None),  # Note: added this column
+        'log_type': log.get('log_type', None),  
+        'log_data': log.get('log_data', None),  
+        'log_topics': log.get('log_topics', None),  
+        'log_removed': log.get('log_removed', None),  
     }
     transformed_logs.append(transformed_log)
 
